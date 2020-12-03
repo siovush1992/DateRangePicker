@@ -884,6 +884,9 @@ public class CalendarPickerView extends RecyclerView {
                 boolean isSelectable =
                         isCurrentMonth && betweenDates(cal, minCal, maxCal) && isDateSelectable(date);
                 boolean isToday = sameDate(cal, today);
+                if(isToday){
+                    isSelected = true
+                }
                 boolean isHighlighted = containsDate(highlightedCals, cal);
                 int value = cal.get(DAY_OF_MONTH);
 
